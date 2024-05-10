@@ -404,3 +404,33 @@ footer {
 .info-section__text p {
   color: rgba(0,0,0,.9);
 }
+
+@media (max-width: 1024px) {
+    .info-section__img {  
+      grid-column: 2/6;
+  }
+
+  .info-section__text {
+    grid-column: 2/6;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .info-section__img--size {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 840px) {
+  .info-section__img--size {
+    height: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .info-section__img--size {
+    height: 90%;
+  }
+}
