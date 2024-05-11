@@ -182,6 +182,7 @@ header .logo img {
 	/*margin-top: -50px; Nuevo*/
   grid-column: 1/-1;
 	margin-top: -100px; /*Nuevo*/
+  margin-bottom: 3.25rem;
 	position: relative;
   color: #eee;
 }
@@ -306,8 +307,17 @@ header .logo img {
 	color: black;
 }
 
+@keyframes animation {
+  from {
+    bottom: -100px
+  }
+  to {
+    bottom: 0px
+  }
+}
+
 .about-us {
-  margin: 3.25rem 0;
+  margin: 3.25rem 0 3.25rem 0;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column: 1/-1;
@@ -329,6 +339,11 @@ header .logo img {
   grid-column: 3/-1;
 }
 
+.animation-1 {
+  position: relative;
+  animation: 3s animation;
+}
+
 .about-us__title {
   font-size: 2rem
 }
@@ -348,11 +363,34 @@ header .logo img {
   text-align: center;
 }
 
+.about-us__button:hover {
+  background: rgb(21, 20, 20);
+}
+
+@media (max-width: 750px) {
+  .about-us__button {
+    width: 100%;
+  }
+}
+
 .about-us__subtitle,
 .about-us__paragrah,
 .about-us__button,
 .info-section__title {
   font-size: 1.25rem;
+}
+
+@media (max-width: 1300px) {
+  .about-us__img {
+  margin-left: 0;  
+  grid-column: 2/6;
+}
+
+.about-us__text {
+    margin-left: 0; 
+    margin-right: 0;  
+    grid-column: 2/6;
+  }
 }
 
 footer {

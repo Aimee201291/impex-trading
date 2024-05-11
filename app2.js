@@ -62,3 +62,39 @@ function showSlider() {
 
   items[itemActive].classList.add('active');
 }
+
+// Returns true if the specified element has been scrolled into the viewport.
+function isElementInViewport(elem) {
+    var rect = elem.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function checkAnimation() {
+    var $aboutUs = $('.about-us');
+    var $elem = $aboutUs[0];
+
+    // Obtener la posición del div about-us en relación con el viewport
+    var rect = $elem.getBoundingClientRect();
+
+    // Calcular la posición del div about-us en relación con el viewport
+    var isAbove = rect.bottom <= 0;
+    var isBelow = rect.top >= window.innerHeight;
+
+    // Si nos estamos acercando al div about-us desde arriba (hacia abajo)
+    if (!isAbove && !isBelow) {
+        // Agregar la clase myanimation solo cuando nos acercamos al div desde arriba
+        $aboutUs.addClass('animation-1');
+    } else {
+        // Quitar la clase myanimation cuando nos alejamos del div
+        $aboutUs.removeClass('animation-1');
+    }
+}
+
+$(window).scroll(function(){
+    checkAnimation();
+});
