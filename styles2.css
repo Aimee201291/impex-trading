@@ -182,7 +182,7 @@ header .logo img {
 	/*margin-top: -50px; Nuevo*/
   grid-column: 1/-1;
 	margin-top: -100px; /*Nuevo*/
-  margin-bottom: 3.25rem;
+  /*margin-bottom: 3.25rem;*/
 	position: relative;
   color: #eee;
 }
@@ -243,8 +243,8 @@ header .logo img {
 }
 
 .slider .list .item .content h2 {
-	font-size: 100px;
-	margin: 0;
+	font-size: 4rem;
+	margin: 0 0 2rem 0;
 }
 
 @media (max-width: 33.75rem) {
@@ -344,8 +344,13 @@ header .logo img {
   animation: 3s animation;
 }
 
-.about-us__title {
-  font-size: 2rem
+.about-us__title,
+.products-section__title {
+  font-size: 2rem;
+}
+
+.products-section__title {
+  margin-bottom: 0;
 }
 
 .about-us__subtitle {
@@ -471,4 +476,37 @@ footer {
   .info-section__img--size {
     height: 90%;
   }
+}
+
+.products-section {
+  margin: 0 0 3.25rem 0;
+  display: grid;
+  grid-column: 1/-1;
+  background: rgba(244, 176, 5, 0.9);/*rgb(62, 56, 56);*/
+  padding: 6.5rem 0 0 0;
+}
+
+.products-section__title {
+  text-align: center;
+}
+
+.carousel-item { 
+    
+  /* Other Properties */
+  transition: transform 0.3s ease-out; 
+}
+
+#carouselExampleIndicators {
+  margin-top: 3.25rem;
+  margin-bottom: 6.5rem;
+}
+
+.products-section__row {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.products-section__col {
+  display: flex;
+  justify-content: center
 }

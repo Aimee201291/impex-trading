@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="styles2.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -18,9 +20,9 @@
         <div class="close-nav"><button>×</button></div>
         <nav>
           <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Abouts Us</a></li>
+            <li><a href="#">Contact Us</a></li>
           </ul>
         </nav>
       </div>
@@ -30,46 +32,96 @@
       </div>
   </header>
   <main>
-    <div class="slider">
-      <!-- list items -->
-      <div class="list">
-        <div class="item active">
-          <img src="images/img1.jpg" alt="">
-          <div class="content">
-            <p>Any text</p>
-            <h2>Slide 1</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt iusto assumenda mollitia. Eius voluptatem rem ex ut assumenda recusandae atque quam non, quisquam suscipit pariatur corrupti? Qui quidem fugiat ex?
-            </p>
-          </div>
-        </div>
-        <div class="item">
-          <img src="images/img2.jpg" alt="">
-          <div class="content">
-            <p>Any text</p>
-            <h2>Slide 2</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt iusto assumenda mollitia. Eius voluptatem rem ex ut assumenda recusandae atque quam non, quisquam suscipit pariatur corrupti? Qui quidem fugiat ex?
-            </p>
-          </div>
-        </div>
-        <div class="item">
-          <img src="images/img3.jpg" alt="">
-          <div class="content">
-            <p>Any text</p>
-            <h2>Slide 3</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt iusto assumenda mollitia. Eius voluptatem rem ex ut assumenda recusandae atque quam non, quisquam suscipit pariatur corrupti? Qui quidem fugiat ex?
-            </p>
-          </div>
-        </div>
-        <!-- button arrows -->
-        <div class="arrows">
-          <button id="prev"><</button>
-          <button id="next">></button>
+  <div class="slider">
+    <div class="list">
+      <div class="item active">
+        <img src="images/img1.jpg" alt="">
+        <div class="content">
+          <h2>Get baking with ease: </h2>
+          <p>
+            Instant Dry Yeast by MasterPan offers the convenience of baking without any difficult preparation.
+          </p>
         </div>
       </div>
+      <div class="item">
+        <img src="images/img2.jpg" alt="">
+        <div class="content">
+          <h2>A quality product:</h2>
+          <p>
+            Your baked goods will turn out perfect with Instant Dry Yeast by MasterPan, with the highest quality guarantees.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/img3.jpg" alt="">
+        <div class="content">
+          <h2>Reap benefits:</h2>
+          <p>
+            Get ready to bake with Instant Dry Yeast by MasterPan, and reap all the benefits associated with easy-to-use and high quality baking ingredients.
+          </p>
+        </div>
+      </div>
+      <!-- button arrows -->
+      <div class="arrows">
+        <button id="prev"><</button>
+        <button id="next">></button>
+      </div>
     </div>
+  </div>
+  <div class="products-section">
+    <h2 class="products-section__title">Products</h2>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row products-section__row">
+            <div class="col products-section__col">
+              <img src="images/product_1.png" class="d-block w-75" alt="...">
+            </div>
+            <div class="col products-section__col">
+              <img src="images/product_2.png" class="d-block w-75" alt="...">
+            </div>
+            <div class="col products-section__col">
+            <img src="images/product_3.png" class="d-block w-75" alt="..."> 
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row products-section__row">
+            <div class="col products-section__col">
+              <img src="images/product_1.png" class="d-block w-75" alt="...">
+            </div>
+            <div class="col products-section__col">
+              <img src="images/product_2.png" class="d-block w-75" alt="...">
+            </div>
+            <div class="col products-section__col">
+            <img src="images/product_3.png" class="d-block w-75" alt="..."> 
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row products-section__row">
+            <div class="col products-section__col">
+              <img src="images/product_1.png" class="d-block w-75" alt="...">
+            </div>
+            <div class="col products-section__col">
+              <img src="images/product_2.png" class="d-block w-75" alt="...">
+            </div>
+            <div class="col products-section__col">
+            <img src="images/product_3.png" class="d-block w-75" alt="..."> 
+            </div>
+          </div> 
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
   <!-- About Us -->
   <div class="about-us">
     <div class="about-us__img">
