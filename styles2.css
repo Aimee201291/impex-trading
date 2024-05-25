@@ -510,3 +510,40 @@ footer {
   display: flex;
   justify-content: center
 }
+
+.overlay-container {
+  position: relative;
+  width: 100%;
+}
+
+.overlay-container__image {
+  display: block;
+  border-radius: 1.5rem;
+}
+
+.overlay-container__text {
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); 
+  background: rgb(21, 20, 20);
+  color: #f1f1f1; 
+  width: auto;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 1.5rem;
+}
+
+.overlay-container:hover .overlay-container__text {
+  opacity: 1;
+}
+
+.overlay-container:hover .overlay-container__image {
+  background: rgba(26,26,26, 0.6);
+  opacity: 0.7;
+}
