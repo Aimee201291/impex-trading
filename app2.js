@@ -98,3 +98,57 @@ function checkAnimation() {
 $(window).scroll(function(){
     checkAnimation();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+	const products = [
+		{ src: 'images/product_1.png', name: 'MASTERPAN 3IN1' },
+		{ src: 'images/product_2.png', name: 'MASTERPAN 2IN1' },
+		{ src: 'images/product_3.png', name: 'MASTERPAN Instant Dry Yeast' },
+		{ src: 'images/product_4.png', name: 'MASTERPAN Bread Improver' },
+	];
+
+	function renderProducts(columns) {
+		const carouselInner = document.getElementById('carouselInner');
+		carouselInner.innerHTML = '';
+		let productCount = 0;
+		
+		const items = Math.ceil(products.length / columns);
+		for (let i = 0; i < items; i++) {
+			const carouselItem = document.createElement('div');
+			carouselItem.className = `carousel-item ${i === 0 ? 'active' : ''}`;
+			const row = document.createElement('div');
+			row.className = 'row products-section__row';
+
+		for (let j = 0; j < columns; j++) {
+			if (productCount >= products.length) break;
+			const col = document.createElement('div');
+			col.className = `col-${Math.floor(12 / columns)} products-section__col`;
+			col.innerHTML = `
+				<div class="overlay-container">
+					<img src="${products[productCount].src}" class="d-block w-75 overlay-container__image" alt="...">
+					<div class="overlay-container__text">${products[productCount].name}</div>
+				</div>
+			`;
+			row.appendChild(col);
+			productCount++;
+		}
+
+		carouselItem.appendChild(row);
+		carouselInner.appendChild(carouselItem);
+		}
+	}
+
+	function adjustColumns() {
+			const width = window.innerWidth;
+			if (width >= 1064) {
+					renderProducts(3);
+			} else if (width >= 764) {
+					renderProducts(2);
+			} else {
+					renderProducts(1);
+			}
+	}
+
+    window.addEventListener('resize', adjustColumns);
+    adjustColumns();
+});

@@ -513,7 +513,8 @@ footer {
 
 .overlay-container {
   position: relative;
-  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .overlay-container__image {
@@ -537,6 +538,7 @@ footer {
   padding: 20px;
   text-align: center;
   border-radius: 1.5rem;
+  font-size: 0.8rem;
 }
 
 .overlay-container:hover .overlay-container__text {
@@ -544,6 +546,5 @@ footer {
 }
 
 .overlay-container:hover .overlay-container__image {
-  background: rgba(26,26,26, 0.6);
   opacity: 0.7;
 }
