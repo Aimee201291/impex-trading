@@ -331,7 +331,8 @@ header .logo img {
 }
 
 .our-prices {
-  background: rgba(244, 176, 5, 0.9);
+  /*background: rgba(244, 176, 5, 0.9);*/
+  background-image: linear-gradient(45deg, #F4B005, #F4D03F);
   padding: 6.5rem 0 6.5rem 0;
 }
 
@@ -425,6 +426,15 @@ header .logo img {
   border-radius: 1rem;
 }
 
+th {
+  background: rgb(203, 67, 53) !important;
+  color: #fff !important;
+}
+
+td {
+  background: rgb(247, 220, 111) !important;
+}
+
 @media (max-width: 1300px) {
   .about-us__img {
     margin: 0;  
@@ -454,7 +464,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column: 1/-1;
-  background: rgba(244, 176, 5, 0.9);/*rgb(62, 56, 56);*/
+  background-image: linear-gradient(45deg, #F4B005, #F4D03F);/*background: rgba(244, 176, 5, 0.9);*/
   padding: 2rem 0;
 }
 
@@ -529,7 +539,7 @@ footer {
   margin: 0 0 3.25rem 0;
   display: grid;
   grid-column: 1/-1;
-  background: rgba(244, 176, 5, 0.9);/*rgb(62, 56, 56);*/
+  background-image: linear-gradient(45deg, #F4B005, #F4D03F);/*background: rgba(244, 176, 5, 0.9);*/
   padding: 6.5rem 0 0 0;
 }
 
