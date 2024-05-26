@@ -1,5 +1,6 @@
 const theBody = document.querySelector('body');
 const openNav = document.querySelector('.menu-bar button');
+const toSection = document.getElementsByTagName('a');
 const closeNav = document.querySelector('.close-nav button');
 const Navbar = document.querySelector('.navbar');
 
@@ -21,9 +22,17 @@ function showHide() {
     bodyScroll(); // Calling bodyScroll function to handle body scroll behavior
 }
 
+function showHideOnlyNavbar() {
+    Navbar.classList.toggle('show'); // Toggling the 'show' class on the navigation bar
+    theBody.classList.remove('hide-scroll')
+}
+
 // Attaching event handlers to openNav and closeNav buttons to trigger the showHide function when clicked
 openNav.onclick = showHide;
 closeNav.onclick = showHide;
+for (let i = 0; i < toSection.length; i++) {
+  toSection[i].onclick = showHideOnlyNavbar;
+}
 
 let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
@@ -51,9 +60,9 @@ prev.onclick = function(){
     showSlider();
 }
 // auto run slider
-let refreshInterval = setInterval(() => {
+/*let refreshInterval = setInterval(() => {
     next.click();
-}, 6000)
+}, 6000)*/
 
 function showSlider() {
   //remove item active old

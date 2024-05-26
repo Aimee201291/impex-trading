@@ -40,6 +40,7 @@ html {
     font-size: 16px;
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -62,8 +63,14 @@ header .wrapper {
 }
 header .logo img {
     /*height: 50px;*/
-    height: 60px; /*Nuevo*/
+    height: 60px;
     display: block;
+}
+
+@media (max-width: 360px) {
+  header .logo img {
+    width: 11.25rem;
+  }
 }
 
 .navbar {
@@ -76,10 +83,12 @@ header .logo img {
     background-color: white;
     padding: 20px;
     transition: left 0.3s;
+    display: block;
 }
 
 .navbar.show {
     left: 0 !important;
+    display: block;
 }
 
 .hide-scroll {
@@ -97,15 +106,13 @@ header .logo img {
 .navbar ul a {
     all: unset;
     color: #444444;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     cursor: pointer;
     font-weight: bold;
     font-size: 1.5rem;
 }
 .navbar ul a:hover {
     color: #111111;
-    text-decoration: underline overline;
-    text-decoration-thickness: 3px;
 }
 
 .close-nav {
@@ -160,7 +167,7 @@ header .logo img {
     padding: 30px;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 794px) {
     .navbar {
         all: unset;
         display: block;
@@ -266,16 +273,15 @@ header .logo img {
 	}
 }
 
-.slider .list .item.active p:nth-child(1),
 .slider .list .item.active h2,
-.slider .list .item.active p:nth-child(3) {
+.slider .list .item.active p {
 	transform: translateY(30px);
 	filter: blur(20px);
 	opacity: 0;
 	animation: showContent .5s .7s ease-in-out 1 forwards;
 }
 
-.slider .list .item.active h2 {
+.slider .list .item.active p {
 	animation-delay: 1s;
 }
 
