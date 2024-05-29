@@ -110,10 +110,10 @@ $(window).scroll(function(){
 
 document.addEventListener('DOMContentLoaded', function() {
 	const products = [
-		{ src: 'images/product_1.png', name: 'MASTERPAN 3IN1' },
-		{ src: 'images/product_2.png', name: 'MASTERPAN 2IN1' },
-		{ src: 'images/product_3.png', name: 'MASTERPAN Instant Dry Yeast' },
-		{ src: 'images/product_4.png', name: 'MASTERPAN Bread Improver' },
+		{ src: 'images/products/product1.png', name: 'AVAILABLE IMMEDIATELY' },
+		{ src: 'images/products/product2.png', name: 'AVAILABLE IMMEDIATELY' },
+        { src: 'images/products/product3.png', name: 'AVAILABLE ON REQUEST' },
+		{ src: 'images/products/product4.png', name: 'AVAILABLE ON REQUEST' },
 	];
 
 	function renderProducts(columns) {
@@ -149,9 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	function adjustColumns() {
 			const width = window.innerWidth;
-			if (width >= 1064) {
-					renderProducts(3);
-			} else if (width >= 764) {
+			if (width >= 764) {
 					renderProducts(2);
 			} else {
 					renderProducts(1);
