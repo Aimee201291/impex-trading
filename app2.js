@@ -33,6 +33,8 @@ function showHide() {
 function showHideOnlyNavbar() {
     Navbar.classList.toggle('show'); // Toggling the 'show' class on the navigation bar
     theBody.classList.remove('hide-scroll')
+    prevArrow.classList.remove('hide-arrow');
+    nextArrow.classList.remove('hide-arrow');
 }
 
 function showHideText() {
