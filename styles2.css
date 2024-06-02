@@ -16,6 +16,11 @@ body {
     "footer footer footer footer footer footer"
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 header {
   grid-area: header;
   /*background: rgb(140, 197, 140);*/
