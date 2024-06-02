@@ -360,6 +360,18 @@ header .logo img {
   }
 }
 
+@media (max-width: 81.25rem) {
+  .slider {
+    height: 80vh;
+  }
+
+  .slider > .list > .item > img {
+    min-height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
 .about-us,
 .product-features,
 .product-features-2 {
@@ -723,6 +735,13 @@ footer {
 .certifications__img {
   width: 11.25rem;
   height: 11.25rem;
+}
+
+@media (max-width: 31.25rem) {
+  .certifications__img {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
 }
 
 .certifications__title {
