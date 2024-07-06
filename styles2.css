@@ -627,6 +627,16 @@ footer {
     grid-column: 2/6;
     text-align: center;
   }
+
+  .hide-vertical-form-button {
+    display: none;
+  }
+}
+
+@media (min-width: 1024.1px) {
+  .hide-horizontal-form-button {
+    display: none;
+  }
 }
 
 @media (max-width: 640px) {
